@@ -1,6 +1,10 @@
 #include <stdio.h>
-#include <stdbool.h>
-#include <math.h>  
+#include <math.h>
+
+typedef int bool;
+
+#define true 1
+#define false 0
 
 double x, er, ec;
 bool done;
