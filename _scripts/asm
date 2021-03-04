@@ -1,229 +1,173 @@
-pushq %rbp
-.cfi_def_cfa_offset 16
-.cfi_offset %rbp, -16
-movq %rsp, %rbp
-.cfi_def_cfa_register %rbp
-movq %rdi, -8(%rbp)
-movq %rsi, -16(%rbp)
-movq %rdx, -24(%rbp)
-movq %rcx, -32(%rbp)
-movq %r8, -40(%rbp)
-movl %r9d, -44(%rbp)
-xorps %xmm0, %xmm0
-movss %xmm0, -48(%rbp)
-movss %xmm0, -52(%rbp)
-movss %xmm0, -56(%rbp)
-movss %xmm0, -60(%rbp)
-movss %xmm0, -64(%rbp)
-movl $0, -68(%rbp)
-LBB0_1:
-cmpl $100, -68(%rbp)
-jge LBB0_4
-movq -8(%rbp), %rax
-movslq -68(%rbp), %rcx
-movss (%rax,%rcx,4), %xmm0
-movss %xmm0, -72(%rbp)
-movq -16(%rbp), %rax
-movslq -68(%rbp), %rcx
-movss (%rax,%rcx,4), %xmm0
-movss %xmm0, -76(%rbp)
-movss -72(%rbp), %xmm0
-addss -48(%rbp), %xmm0
-movss %xmm0, -48(%rbp)
-movss -76(%rbp), %xmm0
-addss -52(%rbp), %xmm0
-movss %xmm0, -52(%rbp)
-movss -72(%rbp), %xmm0
-mulss -76(%rbp), %xmm0
-addss -56(%rbp), %xmm0
-movss %xmm0, -56(%rbp)
-movss -72(%rbp), %xmm0
-mulss -72(%rbp), %xmm0
-addss -60(%rbp), %xmm0
-movss %xmm0, -60(%rbp)
-movss -76(%rbp), %xmm0
-mulss -76(%rbp), %xmm0
-addss -64(%rbp), %xmm0
-movl -68(%rbp), %eax
-addl $1, %eax
-movl %eax, -68(%rbp)
-jmp LBB0_1
-movss -60(%rbp), %xmm0
-movss -48(%rbp), %xmm1
-mulss -48(%rbp), %xmm1
-movl -44(%rbp), %eax
-cvtsi2ssl %eax, %xmm2
-divss %xmm2, %xmm1
-subss %xmm1, %xmm0
-movss %xmm0, -80(%rbp)
-movss -56(%rbp), %xmm0
-movss -48(%rbp), %xmm1
-mulss -52(%rbp), %xmm1
-movl -44(%rbp), %eax
-cvtsi2ssl %eax, %xmm2
-divss %xmm2, %xmm1
-subss %xmm1, %xmm0
-movss %xmm0, -84(%rbp)
-movss -64(%rbp), %xmm0
-movss -52(%rbp), %xmm1
-mulss -52(%rbp), %xmm1
-movl -44(%rbp), %eax
-cvtsi2ssl %eax, %xmm2
-divss %xmm2, %xmm1
-subss %xmm1, %xmm0
-movss %xmm0, -88(%rbp)
-movss -84(%rbp), %xmm0
-divss -80(%rbp), %xmm0
-movq -40(%rbp), %rcx
-movss %xmm0, (%rcx)
-movss -60(%rbp), %xmm0
-mulss -52(%rbp), %xmm0
-movss -48(%rbp), %xmm1
-mulss -56(%rbp), %xmm1
-subss %xmm1, %xmm0
-movl -44(%rbp), %eax
-cvtsi2ssl %eax, %xmm1
-divss %xmm1, %xmm0
-divss -80(%rbp), %xmm0
-movq -32(%rbp), %rcx
-movss %xmm0, (%rcx)
-movss -84(%rbp), %xmm0
-cvtss2sd %xmm0, %xmm0
-movss -80(%rbp), %xmm1
-mulss -88(%rbp), %xmm1
-cvtss2sd %xmm1, %xmm1
-sqrtsd %xmm1, %xmm1
-divsd %xmm1, %xmm0
-cvtsd2ss %xmm0, %xmm0
-movss %xmm0, -92(%rbp)
-movss -64(%rbp), %xmm0
-movq -32(%rbp), %rcx
-movss (%rcx), %xmm1
-mulss -52(%rbp), %xmm1
-subss %xmm1, %xmm0
-movq -40(%rbp), %rcx
-movss (%rcx), %xmm1
-mulss -56(%rbp), %xmm1
-subss %xmm1, %xmm0
-movl -44(%rbp), %eax
-subl $2, %eax
-cvtsi2ssl %eax, %xmm1
-divss %xmm1, %xmm0
-cvtss2sd %xmm0, %xmm0
-sqrtsd %xmm0, %xmm0
-cvtsd2ss %xmm0, %xmm0
-movss %xmm0, -96(%rbp)
-movss -96(%rbp), %xmm0
-cvtss2sd %xmm0, %xmm0
-movss -80(%rbp), %xmm1
-cvtss2sd %xmm1, %xmm1
-sqrtsd %xmm1, %xmm1
-divsd %xmm1, %xmm0
-cvtsd2ss %xmm0, %xmm0
-movss %xmm0, -100(%rbp)
-movss -100(%rbp), %xmm0
-cvtss2sd %xmm0, %xmm0
-movss -60(%rbp), %xmm1
-movl -44(%rbp), %eax
-cvtsi2ssl %eax, %xmm2
-divss %xmm2, %xmm1
-cvtss2sd %xmm1, %xmm1
-sqrtsd %xmm1, %xmm1
-mulsd %xmm1, %xmm0
-cvtsd2ss %xmm0, %xmm0
-movss %xmm0, -104(%rbp)
-movl $0, -108(%rbp)
-movl -108(%rbp), %eax
-cmpl -44(%rbp), %eax
-jge LBB0_8
-movq -32(%rbp), %rax
-movss (%rax), %xmm0
-movq -40(%rbp), %rax
-movss (%rax), %xmm1
-movq -8(%rbp), %rax
-movslq -108(%rbp), %rcx
-mulss (%rax,%rcx,4), %xmm1
-addss %xmm1, %xmm0
-movq -24(%rbp), %rax
-movslq -108(%rbp), %rcx
-movss %xmm0, (%rax,%rcx,4)
-movl -108(%rbp), %eax
-addl $1, %eax
-movl %eax, -108(%rbp)
-jmp LBB0_5
-popq %rbp
-retq
-pushq %rbp
-movq %rsp, %rbp
-xorl %eax, %eax
-movl %eax, %edi
-xorl %eax, %eax
-movl $400, %ecx
-movl %ecx, %edx
-movq ___stack_chk_guard@GOTPCREL(%rip), %rsi
-movq (%rsi), %rsi
-movq %rsi, -8(%rbp)
-movl $0, -1220(%rbp)
-leaq -416(%rbp), %rsi
-movq %rdi, -1240(%rbp)
-movq %rsi, %rdi
-movl %eax, %esi
-movq %rdx, -1248(%rbp)
-movl %eax, -1252(%rbp)
-callq _memset
-leaq -816(%rbp), %rdx
-movq %rdx, %rdi
-movl -1252(%rbp), %esi
-movq -1248(%rbp), %rdx
-callq _memset
-leaq -1216(%rbp), %rdx
-movq %rdx, %rdi
-movl -1252(%rbp), %esi
-movq -1248(%rbp), %rdx
-callq _memset
-xorps %xmm0, %xmm0
-movss %xmm0, -1224(%rbp)
-movss %xmm0, -1228(%rbp)
-movq -1240(%rbp), %rdi
-callq _time
-movl %eax, %ecx
-movl %ecx, %edi
-callq _srand
-movl $0, -1232(%rbp)
-cmpl $100, -1232(%rbp)
-jge LBB1_4
-callq _rand
-cltd
-movl $100, %ecx
-idivl %ecx
-cvtsi2ssl %edx, %xmm0
-movslq -1232(%rbp), %rsi
-movss %xmm0, -416(%rbp,%rsi,4)
-callq _rand
-cltd
-movl $100, %ecx
-idivl %ecx
-cvtsi2ssl %edx, %xmm0
-movslq -1232(%rbp), %rsi
-movss %xmm0, -816(%rbp,%rsi,4)
-movl -1232(%rbp), %eax
-addl $1, %eax
-movl %eax, -1232(%rbp)
-jmp LBB1_1
-leaq -1216(%rbp), %rdx
-leaq -816(%rbp), %rsileaq -416(%rbp), %rdi
-leaq -1224(%rbp), %rcx
-leaq -1228(%rbp), %r8
-movl $100, %r9d
-callq _linfit2
-movq ___stack_chk_guard@GOTPCREL(%rip), %rcx
-movq (%rcx), %rcx
-movq -8(%rbp), %rdx
-cmpq %rdx, %rcx
-jne LBB1_6
-xorl %eax, %eax
-addq $1264, %rsp
-popq %rbp
-retq
-callq ___stack_chk_fail
-ud2
+.intel_syntax noprefix
+swap:
+	push	rbp
+	mov	rbp, rsp
+	mov	QWORD PTR -24[rbp], rdi
+	mov	QWORD PTR -32[rbp], rsi
+	mov	rax, QWORD PTR -24[rbp]
+	movsd	xmm0, QWORD PTR [rax]
+	movsd	QWORD PTR -8[rbp], xmm0
+	mov	rax, QWORD PTR -32[rbp]
+	movsd	xmm0, QWORD PTR [rax]
+	mov	rax, QWORD PTR -24[rbp]
+	movsd	QWORD PTR [rax], xmm0
+	mov	rax, QWORD PTR -32[rbp]
+	movsd	xmm0, QWORD PTR -8[rbp]
+	movsd	QWORD PTR [rax], xmm0
+	nop
+	pop	rbp
+	ret
+sort:
+	push	rbp
+	mov	rbp, rsp
+	sub	rsp, 32
+	mov	QWORD PTR -24[rbp], rdi
+	mov	DWORD PTR -28[rbp], esi
+	mov	eax, DWORD PTR -28[rbp]
+	cdqe
+	sal	rax, 3
+	mov	rdi, rax
+	call	malloc@PLT
+	mov	QWORD PTR -8[rbp], rax
+	mov	eax, DWORD PTR -28[rbp]
+	cdqe
+	lea	rdx, 0[0+rax*8]
+	mov	rcx, QWORD PTR -24[rbp]
+	mov	rax, QWORD PTR -8[rbp]
+	mov	rsi, rcx
+	mov	rdi, rax
+	call	memcpy@PLT
+.L7:
+	mov	BYTE PTR -13[rbp], 1
+	mov	DWORD PTR -12[rbp], 0
+	jmp	.L3
+.L6:
+	mov	eax, DWORD PTR -12[rbp]
+	cdqe
+	lea	rdx, 0[0+rax*8]
+	mov	rax, QWORD PTR -8[rbp]
+	add	rax, rdx
+	movsd	xmm0, QWORD PTR [rax]
+	mov	eax, DWORD PTR -12[rbp]
+	cdqe
+	add	rax, 1
+	lea	rdx, 0[0+rax*8]
+	mov	rax, QWORD PTR -8[rbp]
+	add	rax, rdx
+	movsd	xmm1, QWORD PTR [rax]
+	ucomisd	xmm0, xmm1
+	jbe	.L4
+	mov	eax, DWORD PTR -12[rbp]
+	cdqe
+	add	rax, 1
+	lea	rdx, 0[0+rax*8]
+	mov	rax, QWORD PTR -8[rbp]
+	add	rdx, rax
+	mov	eax, DWORD PTR -12[rbp]
+	cdqe
+	lea	rcx, 0[0+rax*8]
+	mov	rax, QWORD PTR -8[rbp]
+	add	rax, rcx
+	mov	rsi, rdx
+	mov	rdi, rax
+	call	swap
+	mov	BYTE PTR -13[rbp], 0
+.L4:
+	add	DWORD PTR -12[rbp], 1
+.L3:
+	mov	eax, DWORD PTR -28[rbp]
+	sub	eax, 1
+	cmp	DWORD PTR -12[rbp], eax
+	jl	.L6
+	cmp	BYTE PTR -13[rbp], 0
+	je	.L7
+	mov	rax, QWORD PTR -8[rbp]
+	leave
+	ret
+.LC0:
+	.string	"%7.1f "
+write_arr:
+	push	rbp
+	mov	rbp, rsp
+	sub	rsp, 48
+	mov	QWORD PTR -24[rbp], rdi
+	mov	DWORD PTR -28[rbp], esi
+	mov	edi, 10
+	call	putchar@PLT
+	mov	DWORD PTR -4[rbp], 0
+	jmp	.L11
+.L12:
+	mov	eax, DWORD PTR -4[rbp]
+	cdqe
+	lea	rdx, 0[0+rax*8]
+	mov	rax, QWORD PTR -24[rbp]
+	add	rax, rdx
+	mov	rax, QWORD PTR [rax]
+	mov	QWORD PTR -40[rbp], rax
+	movsd	xmm0, QWORD PTR -40[rbp]
+	lea	rdi, .LC0[rip]
+	mov	eax, 1
+	call	printf@PLT
+	add	DWORD PTR -4[rbp], 1
+.L11:
+	mov	eax, DWORD PTR -4[rbp]
+	cmp	eax, DWORD PTR -28[rbp]
+	jl	.L12
+	mov	edi, 10
+	call	putchar@PLT
+	nop
+	leave
+	ret
+
+	.globl	main
+main:
+	push	rbp
+	mov	rbp, rsp
+	sub	rsp, 672
+	mov	rax, QWORD PTR fs:40
+	mov	QWORD PTR -8[rbp], rax
+	xor	eax, eax
+	mov	DWORD PTR -660[rbp], 80
+	mov	edi, 0
+	call	time@PLT
+	mov	edi, eax
+	call	srand@PLT
+	mov	DWORD PTR -664[rbp], 0
+	jmp	.L14
+.L15:
+	call	rand@PLT
+	mov	ecx, eax
+	mov	edx, 1374389535
+	mov	eax, ecx
+	imul	edx
+	sar	edx, 5
+	mov	eax, ecx
+	sar	eax, 31
+	sub	edx, eax
+	mov	eax, edx
+	imul	eax, eax, 100
+	sub	ecx, eax
+	mov	eax, ecx
+	cvtsi2sd	xmm0, eax
+	mov	eax, DWORD PTR -664[rbp]
+	cdqe
+	movsd	QWORD PTR -656[rbp+rax*8], xmm0
+	add	DWORD PTR -664[rbp], 1
+.L14:
+	mov	eax, DWORD PTR -664[rbp]
+	cmp	eax, DWORD PTR -660[rbp]
+	jl	.L15
+	mov	edx, DWORD PTR -660[rbp]
+	lea	rax, -656[rbp]
+	mov	esi, edx
+	mov	rdi, rax
+	call	sort
+	mov	eax, 0
+	mov	rsi, QWORD PTR -8[rbp]
+	xor	rsi, QWORD PTR fs:40
+	je	.L17
+	call	__stack_chk_fail@PLT
+.L17:
+	leave
+	ret
+

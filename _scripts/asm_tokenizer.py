@@ -1,4 +1,4 @@
-path = './asm_timofeev'
+path = './asm'
 file = open(path, 'r')
 lines = file.readlines()
 #print(lines)
