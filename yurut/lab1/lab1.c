@@ -40,7 +40,8 @@ double erfc(double x)
 	x2 = x * x;
 	v = 1.0 / (2.0 * x2);
 	sum = v / (1 + 8 * v / (1 + 9 * v / (1 + 10 * v / (1 + 11 * v / (1 + 12 * v)))));
-	sum = v / (1 + 3 * v / (1 + 4 * v / (1 + 5 * v / (1 + 6 * v / (1 + 7 * sum))))); 	return 1.0 / (exp(x2) * x * sqrtpi * (1 + v / (1 + 2 * sum)));
+	sum = v / (1 + 3 * v / (1 + 4 * v / (1 + 5 * v / (1 + 6 * v / (1 + 7 * sum)))));
+	return 1.0 / (exp(x2) * x * sqrtpi * (1 + v / (1 + 2 * sum)));
 } /* function ercf */
 
 int main() /* main */

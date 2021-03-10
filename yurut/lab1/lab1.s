@@ -40,8 +40,8 @@ fstpl -80(%ebp)
 fldl LC8
 fstpl -88(%ebp) 
 fldl LC9
-fstpl -96(%ebp) fldl 
-LC10
+fstpl -96(%ebp) 
+fldl LC10
 fstpl -104(%ebp) 
 fldl -128(%ebp) 
 fmul %st(0), %st 
