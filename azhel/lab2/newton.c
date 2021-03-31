@@ -24,7 +24,6 @@ void newton(float* x) {
 		}
 		dx = fx / dfx;
 		*x = x1 - dx;
-		printf("x= %f fx = %f dfx = %f \n", x1, fx, dfx);
 	} while (!(fabs(dx) <= fabs(tol * *x)));
 }
 
@@ -33,16 +32,6 @@ int main() {
 	bool alldone;
 	bool error;
 
-	alldone = false;
-	do {
-		printf("First guess	(999. to exit): ");
-		scanf("%f", &x);
-		if (x == 999.0) {
-			alldone = true;
-		} else {
-			newton(&x);
-			printf("\nThe solution is %f \n", x);
-
-		}
-	} while (!alldone);
+	x = rand()%100;
+	newton(&x);
 }
