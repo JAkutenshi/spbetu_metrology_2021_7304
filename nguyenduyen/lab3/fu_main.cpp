@@ -45,7 +45,6 @@ void solve(float a[rmax][cmax], float y[cmax], float coef[cmax], int n, int erro
 	error = 0;
 	SAMPLE;
 	
-	SAMPLE;
 	for(i = 0; i < n; i++){
 	SAMPLE;
 		for(j = 0; j < n; j++){
@@ -54,9 +53,10 @@ void solve(float a[rmax][cmax], float y[cmax], float coef[cmax], int n, int erro
 		SAMPLE;
 		}
 	SAMPLE;
-	}
-	
-	det = deter(a);
+	}	
+	SAMPLE;
+	det = deter(a);	
+	SAMPLE;
 	
 	if(det == 0){	
 	SAMPLE;			

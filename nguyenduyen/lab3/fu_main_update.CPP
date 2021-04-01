@@ -37,8 +37,6 @@ void solve(float a[rmax][cmax], float y[cmax], float coef[cmax], int n, int erro
 	float det;
 	error = 0;
 	SAMPLE;
-	
-	SAMPLE;
 	for(i = 0; i < n; i++){
 	SAMPLE;
 		for(j = 0; j < n; j++){
@@ -49,9 +47,11 @@ void solve(float a[rmax][cmax], float y[cmax], float coef[cmax], int n, int erro
 	SAMPLE;
 	}
 	
+	SAMPLE;
 	det = a[0][0] * (a[1][1] * a[2][2] - a[2][1] * a[1][2])
 			 - a[0][1] * (a[1][0] * a[2][2] - a[2][0] * a[1][2])
 			 + a[0][2] * (a[1][0] * a[2][1] - a[2][0] * a[1][1]);
+	SAMPLE;
 	
 	if(det == 0){	
 	SAMPLE;			
@@ -79,4 +79,3 @@ int main()
 	solve(a, y, coef, n, error);
     return 0;
 }
-
