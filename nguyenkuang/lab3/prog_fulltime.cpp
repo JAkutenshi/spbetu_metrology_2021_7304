@@ -12,10 +12,14 @@ void simps(float lower, float upper, float tol, float *sum){
     int i,pieces;
     float x,delta_x,even_sum,odd_sum,end_sum;
     pieces=2;
+	SAMPLE;
     delta_x=(upper-lower)/pieces;
+	SAMPLE;
     even_sum=0.0;
     odd_sum=fx(lower+delta_x);
+	SAMPLE;
     end_sum=fx(lower)+fx(upper);
+	SAMPLE;
     float sum1;
     *sum=(end_sum+4.0*odd_sum)*delta_x/3.0;
 	SAMPLE;
@@ -23,15 +27,22 @@ void simps(float lower, float upper, float tol, float *sum){
     do{
 	SAMPLE;
         pieces=pieces*2;
+		SAMPLE;
         sum1=(*sum);
+		SAMPLE;
         delta_x=(upper-lower)/pieces;
+		SAMPLE;
         even_sum=even_sum+odd_sum;
+		SAMPLE;
         odd_sum=0.0;
 		
 		SAMPLE;
         for(i=1;i<=pieces/2;i++){
+			SAMPLE;
             x=lower+delta_x*(2.0*i-1.0);
+			SAMPLE;
             odd_sum=odd_sum+fx(x);
+			SAMPLE;
         }
 		SAMPLE;
         *sum=(end_sum+4.0*odd_sum+2.0*even_sum)*delta_x/3.0;
