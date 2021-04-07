@@ -8,3 +8,8 @@ git fetch Duyen38
 git fetch NikitaPetaichuk     
 git fetch Villain123          
 git fetch smokfyz             
+git fetch DmitryPetr           
+git fetch MikelDementyev       
+git fetch KateYurut            
+git fetch SpceForMind          
+git fetch IliaAzhel            

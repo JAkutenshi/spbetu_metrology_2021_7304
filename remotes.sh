@@ -8,3 +8,8 @@ git remote add Duyen38              https://github.com/Duyen38/spbetu_metrology_
 git remote add NikitaPetaichuk      https://github.com/NikitaPetaichuk/spbetu_metrology_2021_7304.git
 git remote add Villain123           https://github.com/Villain123/spbetu_metrology_2021_7304.git
 git remote add smokfyz              https://github.com/smokfyz/spbetu_metrology_2021_7304.git
+git remote add DmitryPetr           https://github.com/DmitryPetr/spbetu_metrology_2021_7304.git
+git remote add MikelDementyev       https://github.com/MikelDementyev/spbetu_metrology_2021_7304.git
+git remote add KateYurut            https://github.com/KateYurut/spbetu_metrology_2021_7304.git
+git remote add SpceForMind          https://github.com/SpceForMind/spbetu_metrology_2021_7304.git
+git remote add IliaAzhel            https://github.com/IliaAzhel/spbetu_metrology_2021_7304.git
