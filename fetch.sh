@@ -13,3 +13,4 @@ git fetch MikelDementyev
 git fetch KateYurut            
 git fetch SpceForMind          
 git fetch IliaAzhel            
+git fetch DesMy

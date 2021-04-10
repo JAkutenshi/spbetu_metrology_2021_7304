@@ -13,3 +13,4 @@ git remote add MikelDementyev       https://github.com/MikelDementyev/spbetu_met
 git remote add KateYurut            https://github.com/KateYurut/spbetu_metrology_2021_7304.git
 git remote add SpceForMind          https://github.com/SpceForMind/spbetu_metrology_2021_7304.git
 git remote add IliaAzhel            https://github.com/IliaAzhel/spbetu_metrology_2021_7304.git
+git remote add DesMy                https://github.com/DesMy/spbetu_metrology_2021_7304.git
