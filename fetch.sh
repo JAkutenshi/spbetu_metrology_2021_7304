@@ -14,3 +14,5 @@ git fetch KateYurut
 git fetch SpceForMind          
 git fetch IliaAzhel            
 git fetch DesMy
+git fetch NikitaKoshmanov
+git fetch sokolarab
