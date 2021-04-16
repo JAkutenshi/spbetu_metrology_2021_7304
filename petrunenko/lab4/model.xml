@@ -1,0 +1,47 @@
+<model type="Objects::AMC::Model" name="lab4">
+	<node type="Objects::AMC::Top" name="t1"></node>
+	<node type="Objects::AMC::Top" name="t2"></node>
+	<node type="Objects::AMC::Top" name="t3"></node>
+	<node type="Objects::AMC::Top" name="t4"></node>
+	<node type="Objects::AMC::Top" name="t5"></node>
+	<node type="Objects::AMC::Top" name="t6"></node>
+	<node type="Objects::AMC::Top" name="t7"></node>
+	<node type="Objects::AMC::Top" name="t8"></node>
+	<node type="Objects::AMC::Top" name="t9"></node>
+	<node type="Objects::AMC::Top" name="t10"></node>
+	<node type="Objects::AMC::Top" name="t11"></node>
+	<node type="Objects::AMC::Top" name="t12"></node>
+	<node type="Objects::AMC::Top" name="t13"></node>
+	<node type="Objects::AMC::Top" name="t14"></node>
+	<node type="Objects::AMC::Top" name="t15"></node>
+	<node type="Objects::AMC::Top" name="t16"></node>
+	<node type="Objects::AMC::Top" name="t17"></node>
+	<node type="Objects::AMC::Top" name="t18"></node>
+	<node type="Objects::AMC::Top" name="t19"></node>
+	<node type="Objects::AMC::Top" name="t20"></node>
+	<node type="Objects::AMC::Top" name="t21"></node>
+	<link type="Objects::AMC::Link" name="t1-t2" probability="1" intensity="550.63" deviation="0.0" source="t1" dest="t2"></link>
+	<link type="Objects::AMC::Link" name="t2-t3" probability="1" intensity="0.84" deviation="0.0" source="t2" dest="t3"></link>
+	<link type="Objects::AMC::Link" name="t3-t4" probability="1" intensity="1.47" deviation="0.0" source="t3" dest="t4"></link>
+	<link type="Objects::AMC::Link" name="t4-t5" probability="1" intensity="1.05" deviation="0.0" source="t4" dest="t5"></link>
+	<link type="Objects::AMC::Link" name="t5-t6" probability="1" intensity="1.05" deviation="0.0" source="t5" dest="t6"></link>
+	<link type="Objects::AMC::Link" name="t6-t7" probability="1" intensity="29.54" deviation="0.0" source="t6" dest="t7"></link>
+	<link type="Objects::AMC::Link" name="t7-t8" probability="0.79" intensity="2.93" deviation="0.0" source="t7" dest="t8"></link>
+	<link type="Objects::AMC::Link" name="t8-t9" probability="1" intensity="10.34" deviation="0.0" source="t8" dest="t9"></link>
+	<link type="Objects::AMC::Link" name="t9-t10" probability="1" intensity="10.34" deviation="0.0" source="t9" dest="t10"></link>
+	<link type="Objects::AMC::Link" name="t10-t7" probability="1" intensity="2.67" deviation="0.0" source="t10" dest="t7"></link>
+	<link type="Objects::AMC::Link" name="t7-t11" probability="0.21" intensity="2.72" deviation="0.0" source="t7" dest="t11"></link>
+	<link type="Objects::AMC::Link" name="t11-t12" probability="1" intensity="20.95" deviation="0.0" source="t11" dest="t12"></link>
+	<link type="Objects::AMC::Link" name="t12-t13" probability="1" intensity="370.86" deviation="0.0" source="t12" dest="t13"></link>
+	<link type="Objects::AMC::Link" name="t13-t14" probability="1" intensity="0.84" deviation="0.0" source="t13" dest="t14"></link>
+	<link type="Objects::AMC::Link" name="t14-t15" probability="0.71" intensity="1.89" deviation="0.0" source="t14" dest="t15"></link>
+	<link type="Objects::AMC::Link" name="t15-t16" probability="1" intensity="1.09" deviation="0.0" source="t15" dest="t16"></link>
+	<link type="Objects::AMC::Link" name="t16-t17" probability="1" intensity="27.66" deviation="0.0" source="t16" dest="t17"></link>
+	<link type="Objects::AMC::Link" name="t17-t14" probability="1" intensity="1.82" deviation="0.0" source="t17" dest="t14"></link>
+	<link type="Objects::AMC::Link" name="t14-t18" probability="0.29" intensity="494.90" deviation="0.0" source="t14" dest="t18"></link>
+	<link type="Objects::AMC::Link" name="t18-t20" probability="0.75" intensity="1.68" deviation="0.0" source="t18" dest="t20"></link>
+	<link type="Objects::AMC::Link" name="t18-t19" probability="0.25" intensity="0.00" deviation="0.0" source="t18" dest="t19"></link>
+	<link type="Objects::AMC::Link" name="t19-t20" probability="1" intensity="181.03" deviation="0.0" source="t19" dest="t20"></link>
+	<link type="Objects::AMC::Link" name="t20-t2" probability="0.75" intensity="0.84" deviation="0.0" source="t20" dest="t2"></link>
+	<link type="Objects::AMC::Link" name="t20-t21" probability="0.25" intensity="53.64" deviation="0.0" source="t20" dest="t21"></link>
+</model>
