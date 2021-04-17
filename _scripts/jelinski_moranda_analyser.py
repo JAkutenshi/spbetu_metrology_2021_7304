@@ -27,7 +27,7 @@ def solveA(X):
 def solveB(N, A):
     m_idx = 0
     m_list, f_list, g_list , abs_list = [], [], [], []
-    m_found = False
+    #m_found = False
     while True:
         _m = N + m_idx + 1
         _f, _g = f(_m, N), g(_m, N, A)
@@ -113,7 +113,10 @@ for student in lab5_input.keys():
             if input != sorted(input):
                 print("\t\t\t\t\t\t\t!!!!!! МАССИВ НЕ ОТСОРТИРОВАН !!!!!!")
 
-            if output == solve_jelinski_moranda(input, lab5_k):
+            solution = solve_jelinski_moranda(input, lab5_k)
+            diff = abs(output - solution)
+            percent = max(diff / output * 100, diff / solution * 100)
+            if percent <= 5:
                 print(bcolors.OKGREEN + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" + bcolors.ENDC)
                 print(bcolors.OKGREEN + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ У С П Е Х ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" + bcolors.ENDC)
                 print(bcolors.OKGREEN + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" + bcolors.ENDC)
