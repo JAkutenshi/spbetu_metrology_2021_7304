@@ -1,0 +1,35 @@
+<model type="Objects::AMC::Model" name="linfit"> 
+    <node type="Objects::AMC::Top" name="t1"></node> 
+ 
+    <node type="Objects::AMC::Top" name="t2"></node> 
+ 
+    <node type="Objects::AMC::Top" name="t3"></node> 
+ 
+    <node type="Objects::AMC::Top" name="t4"></node> 
+ 
+    <node type="Objects::AMC::Top" name="t5"></node> 
+ 
+    <node type="Objects::AMC::Top" name="t6"></node> 
+ 
+    <node type="Objects::AMC::Top" name="t7"></node> 
+ 
+	    <link 	type="Objects::AMC::Link" 	name="t1-t2" 	probability="1" 
+intensity="4.19" deviation="0.0"                                     source="t1" dest="t2"></link> 
+ 
+    <link 	type="Objects::AMC::Link" 	name="t2-t3" 	probability="0.999" intensity="1.42" deviation="0.0"                                     source="t2" dest="t3"></link> 
+ 
+	    <link 	type="Objects::AMC::Link" 	name="t3-t2" 	probability="1" 
+intensity="18.12" deviation="0.0"                                     source="t3" dest="t2"></link> 
+ 
+    <link 	type="Objects::AMC::Link" 	name="t2-t4" 	probability="0.001" intensity="0.84" deviation="0.0"                                     source="t2" dest="t4"></link> 
+ 
+	    <link 	type="Objects::AMC::Link" 	name="t4-t5" 	probability="1" 
+intensity="469" deviation="0.0"                                     source="t4" dest="t5"></link> 
+ 
+    <link 	type="Objects::AMC::Link" 	name="t5-t6" 	probability="0.999" intensity="1.43" deviation="0.0"                                     source="t5" dest="t6"></link> 
+ 
+	    <link 	type="Objects::AMC::Link" 	name="t6-t5" 	probability="1" 
+intensity="8.53" deviation="0.0"                                     source="t6" dest="t5"></link> 
+ 
+    <link 	type="Objects::AMC::Link" 	name="t5-t7" 	probability="0.001" intensity="1.68" deviation="0.0"                                     source="t5" dest="t7"></link> 
+</model> 
